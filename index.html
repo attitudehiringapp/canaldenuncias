@@ -6,16 +6,13 @@
     <title>Canal de Denuncias - Attitude & Hiring</title>
     <link rel="stylesheet" href="styles.css"> <!-- Enlace al archivo CSS -->
     <style>
-        /* Estilos para el mensaje de confirmación */
-        #confirmation {
-            display: none; /* Ocultar por defecto */
-            text-align: center;
-            margin-top: 20px;
+        /* Estilos para el encabezado */
+        header {
+            background-color: #d3d3d3; /* Color gris claro */
+            color: black; /* Color del texto */
             padding: 20px;
-            background-color: #d4edda;
-            color: #155724;
-            border: 1px solid #c3e6cb;
-            border-radius: 5px;
+            text-align: center;
+            position: relative; /* Necesario para el posicionamiento absoluto de la imagen */
         }
 
         /* Estilo para la imagen del logotipo */
@@ -27,18 +24,22 @@
             right: 20px; /* Ajusta la distancia desde la derecha */
         }
 
-        header {
-            position: relative; /* Necesario para el posicionamiento absoluto de la imagen */
-            padding: 20px;
+        /* Estilos para el mensaje de confirmación */
+        #confirmation {
+            display: none; /* Ocultar por defecto */
             text-align: center;
-            background-color: #007bff;
-            color: white;
+            margin-top: 20px;
+            padding: 20px;
+            background-color: #d4edda;
+            color: #155724;
+            border: 1px solid #c3e6cb;
+            border-radius: 5px;
         }
     </style>
 </head>
 <body>
     <header>
-        <img src="https://github.com/attitudehiringapp/canaldenuncias/raw/main/1%20Logo%20Transparente%20horizontal.jpg" alt="Logotipo de Attitude & Hiring" class="logo"> <!-- Cambia la ruta a tu logotipo -->
+        <img src="https://github.com/attitudehiringapp/canaldenuncias/blob/main/LOGO%20NEGRO%20TRANSPARENTE%20recorte.png?raw=true" alt="Logotipo de Attitude & Hiring" class="logo"> <!-- Cambia la ruta a tu logotipo -->
         <h1>Canal de Denuncias - Attitude & Hiring</h1>
         <p>Por favor, complete el siguiente formulario para realizar su denuncia.</p>
     </header>
@@ -81,5 +82,4 @@
 
         <div id="confirmation">
             <h3>¡Gracias por su denuncia!</h3>
-            <p>Su denuncia ha sido recibida con éxito.</p>
-            <p>Su código de confirmación es: <span id="confirmationCode"></span></p
+            <p>Su denuncia ha sido recibida con éxito.</
