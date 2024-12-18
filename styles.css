@@ -37,7 +37,7 @@ input[type="text"],
 input[type="date"],
 select,
 textarea {
-    width: 100%; /* Ancho completo */
+    width: calc(100% - 20px); /* Ancho completo menos el margen */
     padding: 10px; /* Espaciado interno */
     margin-bottom: 15px; /* Espaciado inferior */
     border: 1px solid #ccc; /* Borde */
