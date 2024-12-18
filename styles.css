@@ -1,15 +1,16 @@
 body {
-    font-family: Arial, sans-serif;
+    font-family: 'Poppins', sans-serif; /* Cambiar la fuente a Poppins */
     margin: 0;
     padding: 0;
-    background-color: #f4f4f4;
+    background-color: #f4f4f4; /* Color de fondo de la página */
 }
 
 header {
-    background-color: #007bff; /* Color de fondo del encabezado */
-    color: white; /* Color del texto */
+    background-color: #d3d3d3; /* Color gris claro */
+    color: black; /* Color del texto */
     padding: 20px;
     text-align: center;
+    position: relative; /* Necesario para el posicionamiento absoluto de la imagen */
 }
 
 h1 {
@@ -64,4 +65,14 @@ button:hover {
     color: #155724; /* Color del texto del mensaje de confirmación */
     border: 1px solid #c3e6cb; /* Borde del mensaje de confirmación */
     border-radius: 5px; /* Bordes redondeados */
+}
+
+/* Estilo para la imagen del logotipo */
+.logo {
+    max-width: 150px; /* Ajusta el tamaño máximo de la imagen */
+    height: auto; /* Mantiene la proporción de la imagen */
+    position: absolute; /* Posiciona la imagen de forma absoluta */
+    top: 20px; /* Ajusta la distancia desde la parte superior */
+    right: 20px; /* Ajusta la distancia desde la derecha */
+    background-color: transparent; /* Asegura que el fondo sea transparente */
 }
