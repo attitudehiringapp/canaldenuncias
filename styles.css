@@ -6,7 +6,7 @@ body {
 }
 
 header {
-    background-color: #d3d3d3; /* Color gris claro */
+    background-color: white; /* Cambiar el color de fondo del encabezado a blanco */
     color: black; /* Color del texto */
     padding: 20px;
     text-align: center;
