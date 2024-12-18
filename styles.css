@@ -75,4 +75,10 @@ button:hover {
     top: 20px; /* Ajusta la distancia desde la parte superior */
     right: 20px; /* Ajusta la distancia desde la derecha */
     background-color: transparent; /* Asegura que el fondo sea transparente */
+    z-index: 10; /* Asegura que la imagen esté por encima de otros elementos */
+}
+
+/* Evitar que el contenedor del encabezado se ajuste al tamaño de la ventana */
+header {
+    overflow: hidden; /* Evita que el contenido se desborde */
 }
