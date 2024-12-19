@@ -1,8 +1,4 @@
-function generateCode() {
-    const characters = 'ABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789';
-    let code = '';
-    for (let i = 0; i < 8; i++) {
-        code += characters.charAt(Math.floor(Math.random() * characters.length));
-    }
-    document.getElementById('confirmation-code').innerText = code;
-}
+// confirmacion.js
+setTimeout(function() {
+    window.location.href = 'index.html'; // Redirige a la página principal
+}, 5000); // 5000 milisegundos = 5 segundos
