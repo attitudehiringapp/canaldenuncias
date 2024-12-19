@@ -3,19 +3,51 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Confirmación - Attitude & Hiring</title>
-    <link rel="stylesheet" href="styles.css"> <!-- Enlace al archivo CSS -->
-    <script src="confirmacion.js" defer></script> <!-- Enlace al archivo JS -->
+    <title>Confirmación de Denuncia</title>
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        /* Estilos adicionales específicos para la página de confirmación */
+        #confirmation {
+            text-align: center;
+            margin-top: 50px;
+            padding: 20px;
+            background-color: #d4edda;
+            color: #155724;
+            border: 1px solid #c3e6cb;
+            border-radius: 5px;
+            max-width: 600px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+    </style>
 </head>
 <body>
     <header>
+        <img src="ruta/a/tu/logo.png" alt="Logotipo de Attitude & Hiring" class="logo">
         <h1>Confirmación de Denuncia</h1>
     </header>
 
-    <section>
-        <h2>¡Gracias por su denuncia!</h2>
-        <p>Su denuncia ha sido recibida con éxito. Nos tomamos muy en serio su comunicación y tomaremos las medidas necesarias.</p>
-        <p>Si desea realizar otra denuncia, <a href="index.html">haga clic aquí</a>.</p>
+    <section id="confirmation">
+        <h3>¡Gracias por su denuncia!</h3>
+        <p>Su denuncia ha sido recibida con éxito.</p>
+        <p>Su código de confirmación es: <span id="confirmationCode"></span></p>
     </section>
+
+    <footer>
+        <p>© 2025 Attitude & Hiring. Todos los derechos reservados.</p>
+    </footer>
+
+    <script>
+        // Obtener el código de confirmación de la URL
+        const params = new URLSearchParams(window.location.search);
+        const code = params.get('code');
+
+        // Mostrar el código de confirmación
+        if (code) {
+            document.getElementById('confirmationCode').textContent = code;
+        } else {
+            document.getElementById('confirmationCode').textContent = 'Código no disponible.';
+        }
+    </script>
 </body>
 </html>
