@@ -1,75 +1,92 @@
-/* Estilos generales */
-body {
-    font-family: Arial, sans-serif;
-    margin: 0;
-    padding: 0;
-    background-color: #f4f4f4;
-    color: #333;
-}
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Canal de Denuncias - Attitude & Hiring</title>
+    <link rel="stylesheet" href="styles.css"> <!-- Enlace al archivo CSS -->
+    <style>
+        /* Estilos adicionales para el mensaje de confirmación */
+        #confirmation {
+            display: none; /* Ocultar por defecto */
+            text-align: center;
+            margin-top: 20px;
+            padding: 20px;
+            background-color: #d4edda;
+            color: #155724;
+            border: 1px solid #c3e6cb;
+            border-radius: 5px;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <img src="ruta/a/tu/logo.png" alt="Logotipo de Attitude & Hiring" class="logo"> <!-- Cambia la ruta a tu logotipo -->
+        <h1>Canal de Denuncias - Attitude & Hiring</h1>
+        <p>Por favor, complete el siguiente formulario para realizar su denuncia.</p>
+    </header>
 
-header {
-    background-color: #fff; /* Cambiado a blanco */
-    color: #333; /* Texto oscuro */
-    padding: 20px;
-    text-align: center;
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Sombra sutil para el encabezado */
-}
+    <section id="formulario">
+        <h2>Formulario de Denuncia</h2>
+        <form id="denunciaForm">
+            <label for="tipo_comunicado">1. Tipo de Comunicado:</label>
+            <input type="text" id="tipo_comunicado" name="tipo_comunicado" required placeholder="Acoso, fraude, etc.">
 
-.logo {
-    max-width: 150px;
-    margin-bottom: 10px;
-}
+            <label for="comunicado_anonimo">2. ¿Comunicado Anónimo?</label>
+            <select id="comunicado_anonimo" name="comunicado_anonimo" required>
+                <option value="si">Sí</option>
+                <option value="no">No</option>
+            </select>
 
-h1, h2 {
-    margin: 0;
-}
+            <label for="datos_denunciante">3. Datos del Denunciante:</label>
+            <input type="text" id="datos_denunciante" name="datos_denunciante" placeholder="Omita si es anónimo">
 
-section {
-    max-width: 600px;
-    margin: 20px auto;
-    padding: 20px;
-    background: #fff;
-    border-radius: 5px;
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-}
+            <label for="comunicado_direccion">4. ¿Se ha comunicado a dirección?</label>
+            <select id="comunicado_direccion" name="comunicado_direccion" required>
+                <option value="si">Sí</option>
+                <option value="no">No</option>
+            </select>
 
-form {
-    display: flex;
-    flex-direction: column;
-}
+            <label for="testigos">5. ¿Hay testigos?</label>
+            <input type="text" id="testigos" name="testigos" placeholder="Ejemplo: personal de mantenimiento">
 
-label {
-    margin: 10px 0 5px;
-}
+            <label for="donde_sucedio">6. ¿Dónde sucedió?</label>
+            <input type="text" id="donde_sucedio" name="donde_sucedio" required placeholder="Escriba su respuesta">
 
-input[type="text"],
-input[type="date"],
-select,
-textarea {
-    padding: 10px;
-    margin-bottom: 15px;
-    border: 1px solid #ccc;
-    border-radius: 4px;
-}
+            <label for="cuando_sucedio">7. ¿Cuándo sucedió?</label>
+            <input type="date" id="cuando_sucedio" name="cuando_sucedio" required>
 
-button {
-    padding: 10px;
-    background-color: #5cb85c;
-    color: white;
-    border: none;
-    border-radius: 4px;
-    cursor: pointer;
-}
+            <label for="comunicado">8. Comunicado:</label>
+            <textarea id="comunicado" name="comunicado" required placeholder="Escriba su respuesta"></textarea>
 
-button:hover {
-    background-color: #4cae4c;
-}
+            <button type="submit">Enviar Denuncia</button>
+        </form>
 
-a {
-    color: #5cb85c;
-    text-decoration: none;
-}
+        <div id="confirmation">
+            <h3>¡Gracias por su denuncia!</h3>
+            <p>Su denuncia ha sido recibida con éxito.</p>
+            <p>Su código de confirmación es: <span id="confirmationCode"></span></p>
+        </div>
+    </section>
 
-a:hover {
-    text-decoration: underline;
-}
+    <footer>
+        <p>© 2025 Attitude & Hiring. Todos los derechos reservados.</p>
+    </footer>
+
+    <script>
+        document.getElementById('denunciaForm').addEventListener('submit', function(event) {
+            event.preventDefault(); // Evita el envío del formulario
+
+            // Generar un código de confirmación aleatorio
+            const code = Math.random().toString(36).substring(2, 8).toUpperCase();
+            document.getElementById('confirmationCode').textContent = code;
+
+            // Mostrar el mensaje de confirmación
+            document.getElementById('confirmation').style.display = 'block';
+
+            // Limpiar el formulario después del envío
+            document.getElementById('denunciaForm').reset();
+        });
+    </script>
+</body>
+</html>
