@@ -5,37 +5,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Canal de Denuncias - Attitude & Hiring</title>
     <link rel="stylesheet" href="styles.css"> <!-- Enlace al archivo CSS -->
-    <style>
-        /* Estilos para el encabezado */
-        header {
-            background-color: #d3d3d3; /* Color gris claro */
-            color: black; /* Color del texto */
-            padding: 20px;
-            text-align: center;
-            position: relative; /* Necesario para el posicionamiento absoluto de la imagen */
-        }
-
-        /* Estilo para la imagen del logotipo */
-        .logo {
-            max-width: 150px; /* Ajusta el tamaño máximo de la imagen */
-            height: auto; /* Mantiene la proporción de la imagen */
-            position: absolute; /* Posiciona la imagen de forma absoluta */
-            top: 20px; /* Ajusta la distancia desde la parte superior */
-            right: 20px; /* Ajusta la distancia desde la derecha */
-        }
-
-        /* Estilos para el mensaje de confirmación */
-        #confirmation {
-            display: none; /* Ocultar por defecto */
-            text-align: center;
-            margin-top: 20px;
-            padding: 20px;
-            background-color: #d4edda;
-            color: #155724;
-            border: 1px solid #c3e6cb;
-            border-radius: 5px;
-        }
-    </style>
 </head>
 <body>
     <header>
@@ -80,6 +49,14 @@
 
             <button type="submit">Enviar Denuncia</button>
         </form>
+    </section>
 
-        <div id="confirmation">
-            <h3
+    <script>
+        function handleSubmit(event) {
+            event.preventDefault(); // Evita el envío del formulario
+            // Redirige a la página de confirmación
+            window.location.href = 'confirmacion.html';
+        }
+    </script>
+</body>
+</html>
