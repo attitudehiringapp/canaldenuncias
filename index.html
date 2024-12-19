@@ -5,18 +5,37 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Canal de Denuncias - Attitude & Hiring</title>
     <link rel="stylesheet" href="styles.css"> <!-- Enlace al archivo CSS -->
+    <style>
+        /* Estilos para el mensaje de confirmación */
+        #confirmation {
+            display: none; /* Ocultar por defecto */
+            text-align: center;
+            margin-top: 20px;
+            padding: 20px;
+            background-color: #d4edda;
+            color: #155724;
+            border: 1px solid #c3e6cb;
+            border-radius: 5px;
+        }
+
+        /* Estilo para la imagen del logotipo */
+        .logo {
+            max-width: 150px;
+            float: right; /* Alinear a la derecha */
+            margin: 20px; /* Espaciado alrededor de la imagen */
+        }
+    </style>
 </head>
 <body>
     <header>
-        <img src="https://github.com/attitudehiringapp/canaldenuncias/blob/main/LOGO%20NEGRO%20TRANSPARENTE%20recorte.png?raw=true" alt="Logotipo de Attitude & Hiring" class="logo">
-        <h1>Canal interno de Información</h1>
+        <img src="ruta/a/tu/logo.png" alt="Logotipo de Attitude & Hiring" class="logo"> <!-- Cambia la ruta a tu logotipo -->
+        <h1>Canal de Denuncias - Attitude & Hiring</h1>
         <p>Por favor, complete el siguiente formulario para realizar su denuncia.</p>
-        <p>Este formulario será tratado de forma totalmente anónima.</p>
     </header>
 
     <section id="formulario">
         <h2>Formulario de Denuncia</h2>
-        <form id="denunciaForm" onsubmit="return handleSubmit(event)">
+        <form id="denunciaForm">
             <label for="tipo_comunicado">1. Tipo de Comunicado:</label>
             <input type="text" id="tipo_comunicado" name="tipo_comunicado" required placeholder="Acoso, fraude, etc.">
 
@@ -49,14 +68,24 @@
 
             <button type="submit">Enviar Denuncia</button>
         </form>
+
+        <div id="confirmation">
+            <h3>¡Gracias por su denuncia!</h3>
+            <p>Su denuncia ha sido recibida con éxito.</p>
+            <p>Su código de confirmación es: <span id="confirmationCode"></span></p>
+        </div>
     </section>
 
+    <footer>
+        <p>© 2025 Attitude & Hiring. Todos los derechos reservados.</p>
+    </footer>
+
     <script>
-        function handleSubmit(event) {
+        document.getElementById('denunciaForm').addEventListener('submit', function(event) {
             event.preventDefault(); // Evita el envío del formulario
-            // Redirige a la página de confirmación
-            window.location.href = 'confirmacion.html';
-        }
-    </script>
-</body>
-</html>
+
+            // Generar un código de confirmación aleatorio
+            const code = Math.random().toString(36).substring(2, 8).toUpperCase();
+            document.getElementById('confirmationCode').textContent = code;
+
+            // Ocultar
