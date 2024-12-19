@@ -1,84 +1,75 @@
+/* Estilos generales */
 body {
-    font-family: 'Poppins', sans-serif; /* Cambiar la fuente a Poppins */
+    font-family: Arial, sans-serif;
     margin: 0;
     padding: 0;
-    background-color: #f4f4f4; /* Color de fondo de la página */
+    background-color: #f4f4f4;
+    color: #333;
 }
 
 header {
-    background-color: white; /* Cambiar el color de fondo del encabezado a blanco */
-    color: black; /* Color del texto */
+    background-color: #fff; /* Cambiado a blanco */
+    color: #333; /* Texto oscuro */
     padding: 20px;
     text-align: center;
-    position: relative; /* Necesario para el posicionamiento absoluto de la imagen */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Sombra sutil para el encabezado */
 }
 
-h1 {
-    margin: 0; /* Eliminar margen del título */
+.logo {
+    max-width: 150px;
+    margin-bottom: 10px;
 }
 
-h2 {
-    color: #333; /* Color del subtítulo */
+h1, h2 {
+    margin: 0;
 }
 
 section {
+    max-width: 600px;
+    margin: 20px auto;
     padding: 20px;
-    background-color: white; /* Color de fondo del formulario */
-    margin: 20px; /* Margen alrededor del formulario */
-    border-radius: 5px; /* Bordes redondeados */
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Sombra para el formulario */
+    background: #fff;
+    border-radius: 5px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+form {
+    display: flex;
+    flex-direction: column;
 }
 
 label {
-    display: block; /* Hacer que las etiquetas ocupen toda la línea */
-    margin: 10px 0 5px; /* Espaciado alrededor de las etiquetas */
+    margin: 10px 0 5px;
 }
 
 input[type="text"],
 input[type="date"],
 select,
 textarea {
-    width: calc(100% - 20px); /* Ancho completo menos el margen */
-    padding: 10px; /* Espaciado interno */
-    margin-bottom: 15px; /* Espaciado inferior */
-    border: 1px solid #ccc; /* Borde */
-    border-radius: 4px; /* Bordes redondeados */
+    padding: 10px;
+    margin-bottom: 15px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
 }
 
 button {
-    background-color: #28a745; /* Color de fondo del botón */
-    color: white; /* Color del texto del botón */
-    border: none; /* Sin borde */
-    padding: 10px 15px; /* Espaciado interno */
-    border-radius: 4px; /* Bordes redondeados */
-    cursor: pointer; /* Cambiar cursor al pasar el ratón */
+    padding: 10px;
+    background-color: #5cb85c;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
 }
 
 button:hover {
-    background-color: #218838; /* Color de fondo al pasar el ratón */
+    background-color: #4cae4c;
 }
 
-#confirmation {
-    margin-top: 20px; /* Espaciado superior */
-    padding: 20px;
-    background-color: #d4edda; /* Color de fondo del mensaje de confirmación */
-    color: #155724; /* Color del texto del mensaje de confirmación */
-    border: 1px solid #c3e6cb; /* Borde del mensaje de confirmación */
-    border-radius: 5px; /* Bordes redondeados */
+a {
+    color: #5cb85c;
+    text-decoration: none;
 }
 
-/* Estilo para la imagen del logotipo */
-.logo {
-    max-width: 100%; /* La imagen no excederá el ancho del contenedor */
-    height: auto; /* Mantiene la proporción de la imagen */
-    position: absolute; /* Posiciona la imagen de forma absoluta */
-    top: 20px; /* Ajusta la distancia desde la parte superior */
-    right: 20px; /* Ajusta la distancia desde la derecha */
-    background-color: transparent; /* Asegura que el fondo sea transparente */
-    z-index: 10; /* Asegura que la imagen esté por encima de otros elementos */
-}
-
-/* Evitar que el contenedor del encabezado se ajuste al tamaño de la ventana */
-header {
-    overflow: hidden; /* Evita que el contenido se desborde */
+a:hover {
+    text-decoration: underline;
 }
