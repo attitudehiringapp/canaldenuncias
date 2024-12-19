@@ -86,4 +86,14 @@
 
             // Generar un código de confirmación aleatorio
             const code = Math.random().toString(36).substring(2, 8).toUpperCase();
-            document.getElementById('confirmationCode').textContent =
+            document.getElementById('confirmationCode').textContent = code;
+
+            // Mostrar el mensaje de confirmación
+            document.getElementById('confirmation').style.display = 'block';
+
+            // Limpiar el formulario después del envío
+            document.getElementById('denunciaForm').reset();
+        });
+    </script>
+</body>
+</html>
