@@ -69,7 +69,7 @@ button:hover {
 
 /* Estilo para la imagen del logotipo */
 .logo {
-    max-width: 150px; /* Ajusta el tamaño máximo de la imagen */
+    max-width: 100%; /* La imagen no excederá el ancho del contenedor */
     height: auto; /* Mantiene la proporción de la imagen */
     position: absolute; /* Posiciona la imagen de forma absoluta */
     top: 20px; /* Ajusta la distancia desde la parte superior */
