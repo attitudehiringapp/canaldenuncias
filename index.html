@@ -39,14 +39,15 @@
 </head>
 <body>
     <header>
-        <img src="https://github.com/attitudehiringapp/canaldenuncias/blob/main/LOGO%20NEGRO%20TRANSPARENTE%20recorte.png?raw=true" alt="Logotipo de Attitude & Hiring" class="logo"> <!-- Cambia la ruta a tu logotipo -->
+        <img src="https://github.com/attitudehiringapp/canaldenuncias/blob/main/LOGO%20NEGRO%20TRANSPARENTE%20recorte.png?raw=true" alt="Logotipo de Attitude & Hiring" class="logo">
         <h1>Canal interno de Información</h1>
         <p>Por favor, complete el siguiente formulario para realizar su denuncia.</p>
+        <p>Este formulario será tratado de forma totalmente anónima.</p>
     </header>
 
     <section id="formulario">
         <h2>Formulario de Denuncia</h2>
-        <form id="denunciaForm">
+        <form id="denunciaForm" onsubmit="return handleSubmit(event)">
             <label for="tipo_comunicado">1. Tipo de Comunicado:</label>
             <input type="text" id="tipo_comunicado" name="tipo_comunicado" required placeholder="Acoso, fraude, etc.">
 
@@ -81,5 +82,4 @@
         </form>
 
         <div id="confirmation">
-            <h3>¡Gracias por su denuncia!</h3>
-            <p>Su denuncia ha sido recibida con éxito.</
+            <h3
